@@ -1,4 +1,4 @@
-# API - Banco de dados Megafinance | :hammer_and_wrench: In Building
+# API - Banco de dados ArraiaKhrys | :hammer_and_wrench: In Building
 
 # Objetivo
 
@@ -18,7 +18,7 @@ Caso precise de um tutorial de como configurar, clique **[aqui](https://www.yout
 
 1. Usuário: megad3v
 2. Senha: superonze02!
-3. Nome do banco de dados: db_mega_finance
+3. Nome do banco de dados: arraiakhrys
 4. Porta: 3306
 5. Host: 127.0.0.1
 

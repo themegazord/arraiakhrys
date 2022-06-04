@@ -11,8 +11,6 @@ from .serializers import *
 
 
 class SignUp(APIView):
-    
-    permission_classes = (IsAuthenticated,)
     def post(self, request, format=None):
         user = request.data
         serializer = PerfilSerializer(data=request.data)

@@ -53,3 +53,6 @@ python manage.py runserver
 ```
 
 Com o servidor ligado, basta consumir suas api's.
+
+
+Cadastro - arraiakhrys/signup/api/

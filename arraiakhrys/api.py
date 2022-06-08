@@ -1,21 +1,21 @@
-from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.http import Http404
-from rest_framework.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_204_NO_CONTENT
-from rest_framework.response import Response
-from rest_framework.views import APIView
+from django.shortcuts import render
 from rest_framework.permissions import IsAuthenticated
-from .validators import *
+from rest_framework.response import Response
+from rest_framework.status import (HTTP_201_CREATED, HTTP_204_NO_CONTENT,
+                                   HTTP_400_BAD_REQUEST)
+from rest_framework.views import APIView
 
 from .models import *
 from .serializers import *
+from .validators import *
 
 
 class SignUp(APIView):
     def post(self, request, format=None):
         user = request.data
-        print(user)
-        serializer = PerfilSerializer(data=request.data)
+        serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
             if UniqueEmail(request.data):
                 return Response('Email já cadastrado na base de dados', status=HTTP_400_BAD_REQUEST)

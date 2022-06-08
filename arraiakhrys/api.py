@@ -14,6 +14,7 @@ from .serializers import *
 class SignUp(APIView):
     def post(self, request, format=None):
         user = request.data
+        print(user)
         serializer = PerfilSerializer(data=request.data)
         if serializer.is_valid():
             if UniqueEmail(request.data):
